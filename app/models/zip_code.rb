@@ -7,7 +7,12 @@ class ZipCode < ActiveRecord::Base
   def <=>(other)
     value <=> other.value
   end
+
   def to_s
+    value
+  end
+
+  def name
     value
   end
 end
