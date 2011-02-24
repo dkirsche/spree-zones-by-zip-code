@@ -1,6 +1,6 @@
 class ZipCode < ActiveRecord::Base
-  :has_many :zone_members
-  :has_many :zones, :through => :zone_member
+  has_many :zone_members
+  has_many :zones, :through => :zone_member
 
   validates :value, :presence => true
 
