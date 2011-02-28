@@ -1,3 +1,36 @@
-<% @zip_codes.each do |c| %>
-<%= "#{c.number}" %>
-<% end %>
+<%= render :partial => 'admin/shared/configuration_menu' %>
+
+<h1><%= t("zip_codes") %></h1>
+
+<%= image_tag "spinner.gif", :plugin=>"spree", :style => "display:none", :id => 'busy_indicator' %>
+
+<div id="zip-code-list">
+<table class="index" id='listing_zip_codes'>
+  <thead>
+    <tr>
+      <th><%= t("value") %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @zip_codes.each do |zip_code| %>
+      <tr id="<%= dom_id zip_code %>">
+        <td><%=zip_code.value %></td>
+        <td class="actions">
+          <%=link_to_with_icon 'edit', t("edit"), edit_admin_zip_code_url(zip_code) %> &nbsp;
+          <%=link_to_delete zip_code%>
+        </td>
+      </tr>
+    <% end %>
+    <% if @zip_codes.empty? %>
+      <tr><td colspan="3"><%= t(:none) %></td></tr>
+    <% end %>
+  </tbody>
+</table>
+<div id="new_zip_code"></div>
+<p>
+  <%= button_link_to t("new_zip_code"), new_admin_zip_code_url(@zip_code), {:remote => true, :icon => 'add'} %>
+</p>
+
+</div>
+

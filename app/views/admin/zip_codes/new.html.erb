@@ -1,5 +1,10 @@
-<% form_for admin_zip_codes_path do |form| %>
-  <%= form.label :number %>
-  <%= form.text_field :number %>
-  <%= form.submit %>
+<%= render :partial => 'admin/shared/configuration_menu' %>
+
+<%= render 'shared/error_messages', :target => @zip_code%>
+
+
+<%= form_for(:zip_code, :url => collection_url) do |f| %>
+  <%= render :partial => "form", :locals => { :f => f } %>
+  <%= render :partial => "admin/shared/new_resource_links" %>
 <% end %>
+
