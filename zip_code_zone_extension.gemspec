@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'zip_code_zone_extension'
+  s.name        = 'spree-zones-by-zip-code'
   s.version     = '1.0.0'
   s.summary     = 'Add gem summary here'
   #s.description = 'Add (optional) gem description here'
