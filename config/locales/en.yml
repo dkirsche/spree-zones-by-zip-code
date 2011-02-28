@@ -1,6 +1,9 @@
   ---
   en:
     zip_code: "Zip Code"
+    zip_codes: "Zip Codes"
     zip_code_based: "Zip Code Based"
     add_zip_code: "Add Zip Code"
+    new_zip_code: "New Zip Code"
+    editing_zip_code: "Editing Zip Code"
 
