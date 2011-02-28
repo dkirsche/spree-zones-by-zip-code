@@ -3,6 +3,8 @@ class Admin::ZipCodesController < Admin::BaseController
   new_action.response do |wants|
     wants.html {render :layout => !request.xhr?}
   end
+  create.wants.html { redirect_to admin_zip_codes_url }
+  update.wants.html { redirect_to admin_zip_codes_url }
 =begin
   before_filter :load_data
 
@@ -14,8 +16,6 @@ class Admin::ZipCodesController < Admin::BaseController
   end
 
 
-  create.wants.html { redirect_to admin_country_states_url(@country) }
-  update.wants.html { redirect_to admin_country_states_url(@country) }
 
   private
 
