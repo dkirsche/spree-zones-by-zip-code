@@ -1,7 +1,7 @@
 require 'spree_core'
-require 'zip_code_zone_extension_hooks'
+require 'spree_zones_by_zip_code_hooks'
 
-module ZipCodeZoneExtension
+module SpreeZonesByZipCode
   class Engine < Rails::Engine
 
     config.autoload_paths += %W(#{config.root}/lib)

@@ -1,8 +1,8 @@
-namespace :zip_code_zone_extension do
+namespace :spree_zones_by_zip_code do
   desc "Copies all migrations and assets (NOTE: This will be obsolete with Rails 3.1)"
   task :install do
-    Rake::Task['zip_code_zone_extension:install:migrations'].invoke
-    Rake::Task['zip_code_zone_extension:install:assets'].invoke
+    Rake::Task['spree_zones_by_zip_code:install:migrations'].invoke
+    Rake::Task['spree_zones_by_zip_code:install:assets'].invoke
   end
 
   namespace :install do
