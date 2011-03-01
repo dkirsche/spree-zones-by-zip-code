@@ -1,3 +1,3 @@
-class SpreeZonesByZipCode < Spree::ThemeSupport::HookListener
+class SpreeZonesByZipCodeHooks < Spree::ThemeSupport::HookListener
   # custom hooks go here
 end
