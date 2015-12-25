@@ -1,5 +1,4 @@
 require 'spree_core'
-require 'spree_zones_by_zip_code_hooks'
 
 module SpreeZonesByZipCode
   class Engine < Rails::Engine
